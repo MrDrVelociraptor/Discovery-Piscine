@@ -1,0 +1,41 @@
+.image1 {
+    display: flex;
+
+    background-image: url("darth.jpg");
+    width: 100%;
+    height: 750px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 500px;
+}
+.image2{
+    display: flex;
+    background-image: url("doublebrown.jpg");
+    width: 100%;
+    height: 750px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    justify-content: center;
+    color: rgb(99, 98, 199);
+    font-size: 500px;
+
+}
+
+.para {
+    display: flex;
+
+    height: 420px;
+    background-color: black;
+    font-size: 42px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}

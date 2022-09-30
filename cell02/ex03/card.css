@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.card-container, .card-effect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-container{
+    margin: 30px;
+    width: 400px;
+    height: 600px;
+    border-radius: 3%;
+    box-shadow: 15px 15px 15px black;
+}
+
+.card-top{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: space-around;
+}
+
+.card-name{
+    font-size: 20px;
+}
+
+.card-effect{
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-container {
+    background-color: rgb(218, 133, 63);
+    border: rgb(206, 71, 9) 20px solid;
+}
+
+#grt {
+    width: 90%;
+    height: 55%;
+    background-image: url("./fire.jpg");
+    border: orangered 10px solid;
+    border-radius: 3%;
+}
+
+#charmeleon {
+    border-radius: 45%; 
+}
+
+.big {
+    font-size: 13px;
+}
+
+.small {
+    font-size: 10px;
+    
+}
+
+hr {
+    width: 90%;
+    border-color: black;
+}
+
+.writing {
+    width: 80%;
+}

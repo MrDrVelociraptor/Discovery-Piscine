@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: honeydew;
+        }
+        .calculator {
+            height: 420px;
+            width: 600px;
+            border-radius: 15%; 
+            background-color: rgb(66, 65, 65);
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+        }
+        #damathbutton {
+            height: 66px;
+            width: 66px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="calculator">
+    <input type="number" id="left" min="0" placeholder="a number">
+    <select name="math" id="math">
+        <option value="plus">+</option>
+        <option value="minus">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+        <option value="modulo">%</option>
+    </select>
+    <input type="number" id="right" min="0" placeholder="another number">
+    
+    <button id="damathbutton" onclick="domath()">Try me!</button>
+    </div>
+    <script>
+        function domath() {
+            var n1 = document.getElementById("left").value;
+            var n2 = document.getElementById("right").value;
+            var o = document.getElementById("math").value;
+            n1 = parseInt(n1);
+            n2 = parseInt(n2);
+            var plus = parseInt(n1) + parseInt(n2);
+            var minus = parseInt(n1) - parseInt(n2);
+            var multiply = parseInt(n1) * parseInt(n2);
+            var divide = parseInt(n1) / parseInt(n2);
+            var modulo = parseInt(n1) % parseInt(n2);
+            if (n1 >= 0 && n2 >= 0)
+            {   
+                if (o === "plus")
+                {
+                    console.log(plus);
+                    alert(plus);
+                }
+                if (o === "minus")
+                {
+                    console.log(minus);
+                    alert(minus);
+                }
+                if (o === "multiply")
+                {
+                    console.log(multiply);
+                    alert(multiply);
+                }
+                if (o === "divide" && !(n1 === 0 || n2 === 0)) {
+                        console.log(divide);
+                        alert(divide);   
+                }
+                if (o === "divide" && (n1 === 0 || n2 === 0)) {
+                        console.log(divide);
+                        alert("It's over 9000!");
+                    }
+                if (o === "modulo" && !(n1 === 0 || n2 === 0)) {
+                    console.log(modulo);
+                    alert(modulo);
+                }
+                if (o === "modulo" && (n1 === 0 || n2 === 0)) {
+                        console.log(divide);
+                        alert("It's over 9000!");
+                }
+            }
+            else
+                alert("Error :(");
+        }
+        function timer() {
+            alert("Please, use me. . .");
+        }
+        setInterval(timer, 30000); 
+    </script>
+    
+</body>
+</html>

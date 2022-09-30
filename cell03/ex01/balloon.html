@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        #balloon {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            border-radius: 50%;
+            transition-duration: 420ms;
+        }
+    </style>
+</head>
+<body>
+    <div id="balloon" onclick="grow()" onmouseout="shrink()"> </div>
+    <script>
+        var list=["red", "green", "blue"];
+        var i = 0;
+        function grow(event) {
+            var bal = document.getElementById("balloon");
+            var bh = bal.offsetHeight;
+            var bw = bal.offsetWidth;
+            i++;
+            bal.style.height = bh + 10 + "px";
+            bal.style.width = bw + 10 + "px";
+            if (bal.style.height === "420px")
+            {
+                bal.style.height = "200px";
+                bal.style.width = "200px";
+            }
+            i %= list.length
+            bal.style.backgroundColor = list[i];
+        }  
+        function shrink(event) {
+            var bal = document.getElementById("balloon");
+            var bh = bal.offsetHeight;
+            var bw = bal.offsetWidth;
+            if (bal.style.height > "200px")
+            {
+                bal.style.height = bh - 5 + "px";
+                bal.style.width = bw - 5 + "px";
+            }
+            i += list.length - 1;
+            i %= list.length;
+            bal.style.backgroundColor = list[i];
+
+
+        }
+    </script>
+</body>
+</html>

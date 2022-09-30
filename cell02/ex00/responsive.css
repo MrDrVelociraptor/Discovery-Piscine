@@ -1,0 +1,19 @@
+.all{
+    display: flex;
+}
+
+.box{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: auto;
+    border: solid 5px black;
+    margin: 0;
+    padding: 0;
+}
+
+.box, h2 {
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+}
